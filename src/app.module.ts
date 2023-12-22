@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { EasyModule } from './easy/easy.module';
 import { AutomapperModule } from '@automapper/nestjs';
 import { classes } from '@automapper/classes';
+import { ChallengeModule } from './challenge/challenge.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { classes } from '@automapper/classes';
       strategyInitializer: classes(),
     }),
     EasyModule,
+    ChallengeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
